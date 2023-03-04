@@ -1,0 +1,53 @@
+ [
+  {
+    "loopInterval": 2000,
+    "lanes": [{
+      "type": "sine",
+      "frequencyConfig": {
+        "noise":"white",
+        "initialFrequency": 500,
+        "frequencySeed": [0, 1, 2]
+      },
+      "envelope": {
+        "duration": 75,
+        "releaseTime": 1,
+        "attackTime": 25
+      },
+      "delayConfig":{
+        "delay":0,
+        "delaySeed":[1, 2],
+        "minDelay":10,
+        "maxDelay":20
+      }
+    },
+    {
+      "type": "sine",
+      "frequencyConfig": {
+        "initialFrequency": 500,
+        "frequencySeed": [3, 4, 5]
+      },
+      "envelope": {
+        "duration": 100,
+        "releaseTime": 1,
+        "attackTime": 25
+      },
+      "delayConfig":{
+        "delay":1
+      }
+    }, {
+      "type": "sine",
+      "frequencyConfig": {
+        "initialFrequency": 700,
+        "frequencySeed": [6, 7, 8]
+      },
+      "envelope": {
+        "duration": 100,
+        "releaseTime": 1,
+        "attackTime": 25
+      },
+      "delayConfig":{
+        "delay":1.5
+      } 
+    }]
+  }
+]
