@@ -1,53 +1,79 @@
- [
+[
   {
     "loopInterval": 2000,
-    "lanes": [{
-      "type": "sine",
-      "frequencyConfig": {
-        "noise":"white",
-        "initialFrequency": 500,
-        "frequencySeed": [0, 1, 2]
+    "lanes": [
+      {
+        "type": "sine",
+        "frequencyConfig": {
+          "initialFrequency": 400,
+          "frequencySeed": [
+            3,
+            4,
+            5
+          ],
+          "octave":3
+        },
+        "envelope": {
+          "duration": 100,
+          "releaseTime": 1,
+          "attackTime": 25
+        },
+        "delayConfig": {
+          "delay": 0
+        },
+        "effectsConfig": {
+          "reverb": {
+            "type": "LargeLongEchoHall"
+          }
+        }
       },
-      "envelope": {
-        "duration": 75,
-        "releaseTime": 1,
-        "attackTime": 25
+      {
+        "type": "square",
+        "frequencyConfig": {
+          "initialFrequency": 700,
+          "frequencySeed": [
+            6,
+            7,
+            8
+          ],
+          "maxFrequency": 800,
+          "minFrequency": 600
+        },
+        "envelope": {
+          "duration": 100,
+          "releaseTime": 1,
+          "attackTime": 25
+        },
+        "delayConfig": {
+          "delay": 1
+        },
+        "quantizer":true
       },
-      "delayConfig":{
-        "delay":0,
-        "delaySeed":[1, 2],
-        "minDelay":10,
-        "maxDelay":20
+      {
+        "frequencyConfig": {
+          "noise": "white",
+          "frequencySeed": []
+        },
+        "envelope": {
+          "duration": 50,
+          "releaseTime": 1,
+          "attackTime": 25
+        },
+        "delayConfig": {
+          "delay": 1.3,
+          "delaySeed": [
+            1,
+            2
+          ],
+          "minDelay": 10,
+          "maxDelay": 30
+        },
+        "effectsConfig": {
+          "reverb": {
+            "type": "BlockInside"
+          }
+        }
       }
-    },
-    {
-      "type": "sine",
-      "frequencyConfig": {
-        "initialFrequency": 500,
-        "frequencySeed": [3, 4, 5]
-      },
-      "envelope": {
-        "duration": 100,
-        "releaseTime": 1,
-        "attackTime": 25
-      },
-      "delayConfig":{
-        "delay":1
-      }
-    }, {
-      "type": "sine",
-      "frequencyConfig": {
-        "initialFrequency": 700,
-        "frequencySeed": [6, 7, 8]
-      },
-      "envelope": {
-        "duration": 100,
-        "releaseTime": 1,
-        "attackTime": 25
-      },
-      "delayConfig":{
-        "delay":1.5
-      } 
-    }]
+    ]
   }
 ]
