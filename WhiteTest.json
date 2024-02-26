@@ -1,61 +1,11 @@
 [
   {
-    "loopInterval": 2000,
+    "loopInterval": 500,
     "lanes": [
       {
-        "type": "sine",
         "frequencyConfig": {
-          "initialFrequency": 400,
-          "seedConfig": {
-            "seed": [
-              3,
-              4,
-              5
-            ]
-          },
-          "octave": 3
-        },
-        "envelopeConfig": {
-          "duration": 100,
-          "releaseTime": 1,
-          "attackTime": 25
-        },
-        "delayConfig": {
-          "delay": 0
-        },
-        "effectsConfig": {
-          "reverb": {
-            "type": "LargeLongEchoHall"
-          }
-        }
-      },
-      {
-        "type": "square",
-        "frequencyConfig": {
-          "initialFrequency": 700,
-          "seedConfig": {
-            "seed": [
-              6,
-              7,
-              8
-            ],
-            "max": 800,
-            "min": 600
-          }
-        },
-        "envelopeConfig": {
-          "duration": 100,
-          "releaseTime": 1,
-          "attackTime": 25
-        },
-        "delayConfig": {
-          "delay": 1
-        },
-        "quantizer": true
-      },
-      {
-        "frequencyConfig": {
-          "noise": "white"
+          "noise": "white",
+          "frequencySeed": []
         },
         "envelopeConfig": {
           "duration": 50,

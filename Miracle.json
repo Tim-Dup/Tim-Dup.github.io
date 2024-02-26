@@ -1,0 +1,13 @@
+[
+  {
+    "loopInterval": 1611,
+    "lanes": [
+      {
+        "type": "sine",
+        "frequencyConfig": {
+          "initialFrequency": 528
+        }
+      }
+    ]
+  }
+]
